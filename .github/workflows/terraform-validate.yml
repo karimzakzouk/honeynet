@@ -1,6 +1,7 @@
 name: terraform validate
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - "terraform/**"
