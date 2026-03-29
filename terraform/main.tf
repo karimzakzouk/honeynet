@@ -19,10 +19,10 @@ terraform {
 module "honeypot_node" {
   for_each = toset(var.regions)
 
-  source        = "./modules/honeypot-node"
-  region        = each.key
-  honeypot_type = var.honeypot_type
-  instance_type = var.instance_type
+  source              = "./modules/honeypot-node"
+  region              = each.key
+  honeypot_type       = var.honeypot_type
+  instance_type       = var.instance_type
   ssh_public_key_path = var.ssh_public_key_path
 }
 
